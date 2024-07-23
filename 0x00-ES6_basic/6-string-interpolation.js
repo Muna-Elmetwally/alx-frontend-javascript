@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export default function getSanFranciscoDescription() {
   const year = 2017;
   const budget = {
