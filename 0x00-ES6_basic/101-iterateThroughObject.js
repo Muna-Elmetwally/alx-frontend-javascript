@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable radix */
 export default function iterateThroughObject(reportWithIterator) {
   let employeeNames = '';
