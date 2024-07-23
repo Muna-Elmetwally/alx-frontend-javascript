@@ -1,7 +1,12 @@
-/* eslint-disable import/prefer-default-export */
-export function createEmployeesObject(departmentName, employees) {
-  const obj = {
-    [departmentName]: employees,
+export default function createReportObject(employeesList) {
+  const employeesObj = {
+    allEmployees: {
+      ...employeesList,
+    },
+    getNumberOfDepartments() {
+      const listLength = Object.keys(employeesList).length;
+      return listLength;
+    },
   };
-  return obj;
+  return employeesObj;
 }
