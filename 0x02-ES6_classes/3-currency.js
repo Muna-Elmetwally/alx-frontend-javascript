@@ -1,33 +1,38 @@
-class Car {
-  constructor(brand, motor, color) {
-    this.brand = brand;
-    this.motor = motor;
-    this.color = color;
+export default class Currency {
+  constructor(code, name) {
+    if (typeof code !== 'string') {
+      throw new TypeError('Code must be a string');
+    } else if (typeof name !== 'string') {
+      throw new TypeError('Name must be a string');
+    }
+
+    this._code = code;
+    this._name = name;
   }
 
-  get brand() {
-    return this._brand;
+  get name() {
+    return this._name;
   }
 
-  set brand(brand) {
-    this._brand = brand;
+  get code() {
+    return this._code;
   }
 
-  get motor() {
-    return this._motor;
+  set name(name) {
+    if (typeof name !== 'string') {
+      throw new TypeError('Name must be a string');
+    }
+    this._name = name;
   }
 
-  set motor(motor) {
-    this._motor = motor;
+  set code(code) {
+    if (typeof code !== 'string') {
+      throw new TypeError('Code must be a string');
+    }
+    this._code = code;
   }
 
-  get color() {
-    return this._color;
-  }
-
-  set color(color) {
-    this._color = color;
+  displayFullCurrency() {
+    return `${this._name} (${this._code})`;
   }
 }
-
-export default Car;
