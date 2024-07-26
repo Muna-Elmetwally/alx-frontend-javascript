@@ -1,41 +1,33 @@
-class Currency {
-    constructor(code, name) {
-      this.code = code;
-      this.name = name;
-    }
-  
-    /**
-     * @param {String} code
-     */
-    set code(code) {
-      if (typeof code !== 'string') {
-        throw new TypeError('Code must be a String');
-      }
-      this._code = code;
-    }
-  
-    get code() {
-      return this._code;
-    }
-  
-    /**
-     * @param {String} name
-     */
-    set name(name) {
-      if (typeof name !== 'string') {
-        throw new TypeError('Name must be a String');
-      }
-      this._name = name;
-    }
-  
-    get name() {
-      return this._name;
-    }
-  
-    displayFullCurrency() {
-      return `${this.name} (${this.code})`;
-    }
+class Car {
+  constructor(brand, motor, color) {
+    this.brand = brand;
+    this.motor = motor;
+    this.color = color;
   }
-  
-  export default Currency;
-  
+
+  get brand() {
+    return this._brand;
+  }
+
+  set brand(brand) {
+    this._brand = brand;
+  }
+
+  get motor() {
+    return this._motor;
+  }
+
+  set motor(motor) {
+    this._motor = motor;
+  }
+
+  get color() {
+    return this._color;
+  }
+
+  set color(color) {
+    this._color = color;
+  }
+}
+
+export default Car;
