@@ -1,7 +1,7 @@
 function printTeacher(firstName, lastName) {
     return "".concat(firstName[0], ". ").concat(lastName);
 }
-var StudentClass = /** @class */ (function () {
+const StudentClass = /** @class */ (function () {
     function StudentClass(firstName, lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
